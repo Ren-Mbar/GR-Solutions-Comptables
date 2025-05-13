@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GR Solutions Comptables</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      /* Custom Styles */
+      .hero-gradient {
+          background: linear-gradient(135deg, #6B7280 0%, #374151 100%);
+      }
+      .shadow-custom {
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      @keyframes fadeInUp {
+          from {
+              opacity: 0;
+              transform: translateY(20px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+      .animate-fade-in-up {
+          animation: fadeInUp 0.5s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+      <div class="container mx-auto py-4 px-5">
+        <div class="flex items-center justify-between">
+          <a href="#" class="text-2xl font-semibold text-gray-800">GR Solutions Comptables</a>
+          <nav>
+            <ul class="flex space-x-6">
+              <li>
+                <a href="#services" class="text-gray-600 hover:text-gray-800">Services</a>
+              </li>
+              <li>
+                <a href="#about" class="text-gray-600 hover:text-gray-800">À Propos</a>
+              </li>
+              <li>
+                <a href="#testimonials" class="text-gray-600 hover:text-gray-800">Témoignages</a>
+              </li>
+              <li>
+                <a href="#contact" class="text-gray-600 hover:text-gray-800">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-gradient py-20 text-white">
+        <div class="container mx-auto px-5 flex items-center justify-center flex-col md:flex-row">
+          <div class="md:w-1/2 animate-fade-in-up">
+            <h1 class="text-4xl font-bold mb-6">
+              Solutions Comptables Personnalisées pour Votre Succès
+            </h1>
+            <p class="text-lg mb-8">
+              Nous offrons des services de tenue de livres précis et fiables
+              pour vous aider à vous concentrer sur la croissance de votre
+              entreprise.
+            </p>
+            <a href="#contact" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-md">Obtenir une Consultation Gratuite</a>
+          </div>
+          <div class="md:w-1/2">
+            <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="Personne travaillant sur un bureau avec un ordinateur et une calculatrice" class="rounded-lg shadow-custom">
+            <p class="text-xs text-gray-300 mt-2">Image par Pexels</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-5">
+          <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">
+            Nos Services
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+              <h3 class="text-xl font-semibold text-gray-700 mb-4">
+                Tenue de Livres Complète
+              </h3>
+              <p class="text-gray-600">
+                Nous gérons tous les aspects de votre comptabilité, des
+                transactions quotidiennes aux rapports financiers mensuels.
+              </p>
+            </div>
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+              <h3 class="text-xl font-semibold text-gray-700 mb-4">
+                Préparation des Impôts
+              </h3>
+              <p class="text-gray-600">
+                Nous vous aidons à préparer et à soumettre vos déclarations de
+                revenus en toute conformité avec les réglementations fiscales.
+              </p>
+            </div>
+            <!-- Service 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
+              <h3 class="text-xl font-semibold text-gray-700 mb-4">
+                Conseils Financiers
+              </h3>
+              <p class="text-gray-600">
+                Bénéficiez de conseils personnalisés pour optimiser votre
+                gestion financière et prendre des décisions éclairées.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-16">
+        <div class="container mx-auto px-5 flex items-center justify-center flex-col md:flex-row">
+          <div class="md:w-1/2">
+            <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="Équipe travaillant ensemble" class="rounded-lg shadow-custom">
+            <p class="text-xs text-gray-500 mt-2">Image par Pexels</p>
+          </div>
+          <div class="md:w-1/2 pl-8">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">
+              À Propos de GR Solutions Comptables
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Nous sommes une équipe de professionnels comptables passionnés par
+              l'aide aux entreprises pour atteindre leurs objectifs financiers.
+              Avec des années d'expérience, nous offrons des solutions sur
+              mesure pour répondre à vos besoins spécifiques.
+            </p>
+            <p class="text-lg text-gray-600">
+              Notre engagement envers l'excellence et notre approche
+              personnalisée font de nous le partenaire idéal pour votre succès
+              financier.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-5">
+          <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">
+            Témoignages
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <p class="text-gray-600 italic mb-4">
+                "GR Solutions Comptables a transformé notre gestion financière.
+                Leur expertise et leur attention aux détails sont inégalées."
+              </p>
+              <p class="text-gray-700 font-semibold">
+                Jean Dupont, PDG de XYZ Inc.
+              </p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <p class="text-gray-600 italic mb-4">
+                "Grâce à GR Solutions Comptables, nous avons pu optimiser nos
+                impôts et économiser de l'argent. Un service exceptionnel!"
+              </p>
+              <p class="text-gray-700 font-semibold">
+                Marie Tremblay, Propriétaire de ABC Ltée.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-16">
+        <div class="container mx-auto px-5">
+          <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">
+            Contactez-Nous
+          </h2>
+          <div class="max-w-lg mx-auto">
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nom:</label>
+                <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Votre nom">
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Courriel:</label>
+                <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Votre courriel">
+              </div>
+              <div>
+                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                <textarea id="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Votre message"></textarea>
+              </div>
+              <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-md">
+                Envoyer
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 py-8 text-white">
+      <div class="container mx-auto px-5 text-center">
+        <p>© 2024 GR Solutions Comptables. Tous droits réservés.</p>
+      </div>
+    </footer>
+  
+
+</body></html>
