@@ -1,211 +1,686 @@
-<!DOCTYPE html><html lang="fr"><head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GR Solutions Comptables</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GR Solutions Comptables - Expertise Comptable</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
-      /* Custom Styles */
-      .hero-gradient {
-          background: linear-gradient(135deg, #6B7280 0%, #374151 100%);
+      body {
+          font-family: 'Montserrat', sans-serif;
       }
-      .shadow-custom {
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      .gradient-bg {
+          background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
       }
-      @keyframes fadeInUp {
-          from {
-              opacity: 0;
-              transform: translateY(20px);
-          }
-          to {
-              opacity: 1;
-              transform: translateY(0);
-          }
+      .service-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
       }
-
-      .animate-fade-in-up {
-          animation: fadeInUp 0.5s ease-out forwards;
+      .testimonial-card {
+          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
-  <body class="bg-gray-100 font-sans">
-    <header class="bg-white shadow-md">
-      <div class="container mx-auto py-4 px-5">
-        <div class="flex items-center justify-between">
-          <a href="#" class="text-2xl font-semibold text-gray-800">GR Solutions Comptables</a>
-          <nav>
-            <ul class="flex space-x-6">
-              <li>
-                <a href="#services" class="text-gray-600 hover:text-gray-800">Services</a>
-              </li>
-              <li>
-                <a href="#about" class="text-gray-600 hover:text-gray-800">À Propos</a>
-              </li>
-              <li>
-                <a href="#testimonials" class="text-gray-600 hover:text-gray-800">Témoignages</a>
-              </li>
-              <li>
-                <a href="#contact" class="text-gray-600 hover:text-gray-800">Contact</a>
-              </li>
-            </ul>
-          </nav>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <i class="fas fa-calculator text-2xl text-blue-600 mr-2"></i>
+              <span class="text-xl font-bold text-gray-900"
+                >GR Solutions Comptables</span
+              >
+            </div>
+          </div>
+          <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+            <a
+              href="#"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+              >Accueil</a
+            >
+            <a
+              href="#services"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+              >Services</a
+            >
+            <a
+              href="#about"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+              >À propos</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-900 hover:text-blue-600 px-3 py-2 text-sm font-medium"
+              >Contact</a
+            >
+            <a
+              href="#"
+              class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300"
+              >Demander un devis</a
+            >
+          </div>
+          <div class="-mr-2 flex items-center md:hidden">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+              aria-expanded="false"
+              id="mobile-menu-button"
+            >
+              <span class="sr-only">Open main menu</span>
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </header>
+      <!-- Mobile menu -->
+      <div class="hidden md:hidden" id="mobile-menu">
+        <div class="pt-2 pb-3 space-y-1">
+          <a
+            href="#"
+            class="block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base font-medium text-blue-600 bg-blue-50"
+            >Accueil</a
+          >
+          <a
+            href="#services"
+            class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
+            >À propos</a
+          >
+          <a
+            href="#contact"
+            class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-base font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300"
+            >Demander un devis</a
+          >
+        </div>
+      </div>
+    </nav>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="hero-gradient py-20 text-white">
-        <div class="container mx-auto px-5 flex items-center justify-center flex-col md:flex-row">
-          <div class="md:w-1/2 animate-fade-in-up">
-            <h1 class="text-4xl font-bold mb-6">
-              Solutions Comptables Personnalisées pour Votre Succès
+    <!-- Hero Section -->
+    <div class="gradient-bg text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+        <div class="md:flex md:items-center md:justify-between">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+              Votre partenaire comptable de confiance
             </h1>
-            <p class="text-lg mb-8">
-              Nous offrons des services de tenue de livres précis et fiables
-              pour vous aider à vous concentrer sur la croissance de votre
-              entreprise.
+            <p class="text-xl mb-8">
+              Des solutions comptables sur mesure pour les entreprises et les
+              particuliers. Optimisez votre fiscalité et simplifiez votre
+              gestion.
             </p>
-            <a href="#contact" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-md">Obtenir une Consultation Gratuite</a>
+            <div
+              class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4"
+            >
+              <a
+                href="#contact"
+                class="bg-white text-blue-600 px-6 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition duration-300 text-center"
+                >Nous contacter</a
+              >
+              <a
+                href="#services"
+                class="border-2 border-white text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-white hover:text-blue-600 transition duration-300 text-center"
+                >Nos services</a
+              >
+            </div>
           </div>
-          <div class="md:w-1/2">
-            <img src="https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="Personne travaillant sur un bureau avec un ordinateur et une calculatrice" class="rounded-lg shadow-custom">
-            <p class="text-xs text-gray-300 mt-2">Image par Pexels</p>
+          <div class="md:w-1/2 flex justify-center">
+            <img
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Accounting"
+              class="rounded-lg shadow-2xl max-w-md w-full"
+            />
           </div>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- Services Section -->
-      <section id="services" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-5">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">
-            Nos Services
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Service 1 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 class="text-xl font-semibold text-gray-700 mb-4">
-                Tenue de Livres Complète
-              </h3>
-              <p class="text-gray-600">
-                Nous gérons tous les aspects de votre comptabilité, des
-                transactions quotidiennes aux rapports financiers mensuels.
-              </p>
-            </div>
-            <!-- Service 2 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 class="text-xl font-semibold text-gray-700 mb-4">
-                Préparation des Impôts
-              </h3>
-              <p class="text-gray-600">
-                Nous vous aidons à préparer et à soumettre vos déclarations de
-                revenus en toute conformité avec les réglementations fiscales.
-              </p>
-            </div>
-            <!-- Service 3 -->
-            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300">
-              <h3 class="text-xl font-semibold text-gray-700 mb-4">
-                Conseils Financiers
-              </h3>
-              <p class="text-gray-600">
-                Bénéficiez de conseils personnalisés pour optimiser votre
-                gestion financière et prendre des décisions éclairées.
-              </p>
-            </div>
+    <!-- Services Section -->
+    <div
+      id="services"
+      class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24"
+    >
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Nos Services Comptables
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Nous proposons une gamme complète de services comptables adaptés à vos
+          besoins spécifiques.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="service-card bg-white p-6 rounded-lg transition duration-300 transform hover:scale-105"
+        >
+          <div
+            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+          >
+            <i class="fas fa-file-invoice text-blue-600 text-2xl"></i>
           </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Comptabilité Générale
+          </h3>
+          <p class="text-gray-600">
+            Tenue complète de vos livres comptables, bilan, compte de résultat
+            et autres obligations légales.
+          </p>
         </div>
-      </section>
-
-      <!-- About Section -->
-      <section id="about" class="py-16">
-        <div class="container mx-auto px-5 flex items-center justify-center flex-col md:flex-row">
-          <div class="md:w-1/2">
-            <img src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260" alt="Équipe travaillant ensemble" class="rounded-lg shadow-custom">
-            <p class="text-xs text-gray-500 mt-2">Image par Pexels</p>
+        <div
+          class="service-card bg-white p-6 rounded-lg transition duration-300 transform hover:scale-105"
+        >
+          <div
+            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+          >
+            <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
           </div>
-          <div class="md:w-1/2 pl-8">
-            <h2 class="text-3xl font-semibold text-gray-800 mb-6">
-              À Propos de GR Solutions Comptables
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Gestion Financière
+          </h3>
+          <p class="text-gray-600">
+            Analyse financière, prévisions budgétaires et conseils pour
+            optimiser votre trésorerie.
+          </p>
+        </div>
+        <div
+          class="service-card bg-white p-6 rounded-lg transition duration-300 transform hover:scale-105"
+        >
+          <div
+            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+          >
+            <i class="fas fa-euro-sign text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Fiscalité</h3>
+          <p class="text-gray-600">
+            Conseils et déclarations fiscales pour optimiser votre imposition en
+            toute légalité.
+          </p>
+        </div>
+        <div
+          class="service-card bg-white p-6 rounded-lg transition duration-300 transform hover:scale-105"
+        >
+          <div
+            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+          >
+            <i class="fas fa-user-tie text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Conseil aux Entreprises
+          </h3>
+          <p class="text-gray-600">
+            Accompagnement stratégique pour le développement et la pérennité de
+            votre entreprise.
+          </p>
+        </div>
+        <div
+          class="service-card bg-white p-6 rounded-lg transition duration-300 transform hover:scale-105"
+        >
+          <div
+            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+          >
+            <i class="fas fa-hand-holding-usd text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Audit Comptable</h3>
+          <p class="text-gray-600">
+            Vérification et certification de vos comptes pour une transparence
+            totale envers vos partenaires.
+          </p>
+        </div>
+        <div
+          class="service-card bg-white p-6 rounded-lg transition duration-300 transform hover:scale-105"
+        >
+          <div
+            class="flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+          >
+            <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Digitalisation</h3>
+          <p class="text-gray-600">
+            Modernisation de vos processus comptables avec des outils digitaux
+            performants.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="bg-gray-100 py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:flex lg:items-center lg:justify-between">
+          <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Notre Expertise Comptable
             </h2>
-            <p class="text-lg text-gray-600 mb-8">
-              Nous sommes une équipe de professionnels comptables passionnés par
-              l'aide aux entreprises pour atteindre leurs objectifs financiers.
-              Avec des années d'expérience, nous offrons des solutions sur
-              mesure pour répondre à vos besoins spécifiques.
+            <p class="text-gray-600 mb-6">
+              Fondée en 2010, GR Solutions Comptables est un cabinet spécialisé
+              dans l'accompagnement des entrepreneurs et des particuliers dans
+              leurs démarches comptables et fiscales.
             </p>
-            <p class="text-lg text-gray-600">
-              Notre engagement envers l'excellence et notre approche
-              personnalisée font de nous le partenaire idéal pour votre succès
-              financier.
+            <p class="text-gray-600 mb-6">
+              Notre équipe de comptables expérimentés met son expertise à votre
+              service pour vous offrir des solutions sur mesure, adaptées à
+              votre situation et à vos objectifs.
             </p>
+            <div class="flex items-center">
+              <div class="flex-shrink-0">
+                <i class="fas fa-check-circle text-blue-600 text-2xl"></i>
+              </div>
+              <div class="ml-3">
+                <p class="text-gray-600">
+                  <span class="font-bold">15 ans d'expérience</span> dans le
+                  domaine comptable
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center mt-3">
+              <div class="flex-shrink-0">
+                <i class="fas fa-check-circle text-blue-600 text-2xl"></i>
+              </div>
+              <div class="ml-3">
+                <p class="text-gray-600">
+                  <span class="font-bold">Plus de 200 clients</span> satisfaits
+                  chaque année
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center mt-3">
+              <div class="flex-shrink-0">
+                <i class="fas fa-check-circle text-blue-600 text-2xl"></i>
+              </div>
+              <div class="ml-3">
+                <p class="text-gray-600">
+                  <span class="font-bold">Approche personnalisée</span> pour
+                  chaque client
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d3072943383e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+              alt="Team meeting"
+              class="rounded-lg shadow-xl w-full"
+            />
           </div>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- Testimonials Section -->
-      <section id="testimonials" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-5">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">
-            Témoignages
-          </h2>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Testimonial 1 -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <p class="text-gray-600 italic mb-4">
-                "GR Solutions Comptables a transformé notre gestion financière.
-                Leur expertise et leur attention aux détails sont inégalées."
-              </p>
-              <p class="text-gray-700 font-semibold">
-                Jean Dupont, PDG de XYZ Inc.
-              </p>
+    <!-- Testimonials -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">
+          Ils nous font confiance
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Découvrez ce que nos clients disent de notre travail.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="testimonial-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="flex-shrink-0">
+              <img
+                class="h-12 w-12 rounded-full"
+                src="https://randomuser.me/api/portraits/women/32.jpg"
+                alt="Client 1"
+              />
             </div>
-            <!-- Testimonial 2 -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <p class="text-gray-600 italic mb-4">
-                "Grâce à GR Solutions Comptables, nous avons pu optimiser nos
-                impôts et économiser de l'argent. Un service exceptionnel!"
-              </p>
-              <p class="text-gray-700 font-semibold">
-                Marie Tremblay, Propriétaire de ABC Ltée.
-              </p>
+            <div class="ml-4">
+              <h4 class="text-lg font-medium text-gray-900">Marie Dubois</h4>
+              <p class="text-blue-600">Gérante - Boutique de Mode</p>
             </div>
           </div>
+          <p class="text-gray-600 italic">
+            "GR Solutions Comptables a transformé ma gestion administrative. Mon
+            entreprise est maintenant plus organisée et je peux me concentrer
+            sur mon métier."
+          </p>
+          <div class="mt-4 flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
         </div>
-      </section>
+        <div class="testimonial-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="flex-shrink-0">
+              <img
+                class="h-12 w-12 rounded-full"
+                src="https://randomuser.me/api/portraits/men/46.jpg"
+                alt="Client 2"
+              />
+            </div>
+            <div class="ml-4">
+              <h4 class="text-lg font-medium text-gray-900">Jean Martin</h4>
+              <p class="text-blue-600">Directeur - Agence Immobilière</p>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">
+            "Un service professionnel et réactif. Ils ont su optimiser notre
+            fiscalité et nous faire réaliser des économies substantielles."
+          </p>
+          <div class="mt-4 flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="testimonial-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="flex-shrink-0">
+              <img
+                class="h-12 w-12 rounded-full"
+                src="https://randomuser.me/api/portraits/men/22.jpg"
+                alt="Client 3"
+              />
+            </div>
+            <div class="ml-4">
+              <h4 class="text-lg font-medium text-gray-900">Thomas Leroy</h4>
+              <p class="text-blue-600">Freelance - Développeur Web</p>
+            </div>
+          </div>
+          <p class="text-gray-600 italic">
+            "En tant qu'indépendant, j'avais besoin d'un accompagnement simple
+            et efficace. GR Solutions a parfaitement répondu à mes besoins."
+          </p>
+          <div class="mt-4 flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <!-- Contact Section -->
-      <section id="contact" class="py-16">
-        <div class="container mx-auto px-5">
-          <h2 class="text-3xl font-semibold text-gray-800 mb-12 text-center">
-            Contactez-Nous
-          </h2>
-          <div class="max-w-lg mx-auto">
-            <form class="space-y-6">
-              <div>
-                <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nom:</label>
-                <input type="text" id="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Votre nom">
+    <!-- Contact Section -->
+    <div id="contact" class="bg-blue-50 py-16 md:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-8">
+          <div class="mb-8 lg:mb-0">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Contactez-nous
+            </h2>
+            <p class="text-gray-600 mb-6">
+              Nos experts sont à votre disposition pour répondre à toutes vos
+              questions et étudier vos besoins spécifiques.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-600">
+                    123 Rue de la Comptabilité<br />75000 Paris, France
+                  </p>
+                </div>
               </div>
-              <div>
-                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Courriel:</label>
-                <input type="email" id="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Votre courriel">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-600">+33 1 23 45 67 89</p>
+                </div>
               </div>
-              <div>
-                <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
-                <textarea id="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Votre message"></textarea>
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-600">
+                    contact@grsolutions-comptables.com
+                  </p>
+                </div>
               </div>
-              <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-md">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <i class="fas fa-clock text-blue-600 text-xl"></i>
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-600">
+                    Lundi - Vendredi<br />9h00 - 18h00
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <form class="bg-white p-6 rounded-lg shadow-md">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 mb-2"
+                  >Nom complet</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="phone" class="block text-gray-700 mb-2"
+                  >Téléphone</label
+                >
+                <input
+                  type="tel"
+                  id="phone"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="message" class="block text-gray-700 mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-300"
+              >
                 Envoyer
               </button>
             </form>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
 
-    <footer class="bg-gray-800 py-8 text-white">
-      <div class="container mx-auto px-5 text-center">
-        <p>© 2024 GR Solutions Comptables. Tous droits réservés.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-lg font-bold mb-4">GR Solutions Comptables</h3>
+            <p class="text-gray-400">
+              Votre partenaire comptable de confiance pour une gestion
+              financière optimisée et sereine.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Comptabilité</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Gestion Financière</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Fiscalité</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Audit</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Liens utiles</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Mentions légales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition duration-300"
+                  >Politique de confidentialité</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-4">Suivez-nous</h3>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                ><i class="fab fa-facebook-f text-xl"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                ><i class="fab fa-twitter text-xl"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                ><i class="fab fa-linkedin-in text-xl"></i
+              ></a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                ><i class="fab fa-instagram text-xl"></i
+              ></a>
+            </div>
+            <div class="mt-6">
+              <h4 class="font-medium mb-2">Abonnez-vous à notre newsletter</h4>
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="Votre email"
+                  class="px-3 py-2 rounded-l-md text-gray-800 w-full"
+                />
+                <button
+                  class="bg-blue-600 px-4 py-2 rounded-r-md hover:bg-blue-700 transition duration-300"
+                >
+                  <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>© 2023 GR Solutions Comptables. Tous droits réservés.</p>
+        </div>
       </div>
     </footer>
-  
 
-</body></html>
+    <script>
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuButton.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+              e.preventDefault();
+
+              if(this.getAttribute('href') === '#') return;
+
+              document.querySelector(this.getAttribute('href')).scrollIntoView({
+                  behavior: 'smooth'
+              });
+          });
+      });
+
+      // Form submission
+      const contactForm = document.querySelector('form');
+      if(contactForm) {
+          contactForm.addEventListener('submit', function(e) {
+              e.preventDefault();
+              alert('Merci pour votre message. Nous vous contacterons bientôt.');
+              this.reset();
+          });
+      }
+    </script>
+  </body>
+</html>
